@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/" method="post">
+        <h4>Please fill the following inputs to get singed up</h4>
+        email
+        <input type="email" name="email" required>
+        name
+        <input type="text" name="name" required>
+        password
+        <input type="password" name="password" required>
+        address
+        <input type="text" name="address" required>
+        phone
+        <input type="text" name="phone" required>
+        Date of born
+        <input type="date" name="borndate" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h4>Master server</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Email</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Date of Born</th>
+                <th scope="col">Address</th>
+                <th scope="col">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%for(var i=0;i<allMaster.length;i++){%>
+            <tr>
+                <td scope="row">
+                    <b><%=allMaster[i].email%></b>
+                </td>
+
+                <td>
+                    <b><%=allMaster[i].name%></b>
+                </td>
+                <td>
+                    <b><%=allMaster[i].phone%></b>
+                </td>
+                <td>
+                    <b><%=allMaster[i].borndate%></b>
+                </td>
+                <td>
+                    <b><%=allMaster[i].address%></b>
+                </td>
+                <td>
+                    <b><%=allMaster[i].password%></b>
+                </td>
+            </tr>
+            <%}%>
+        </tbody>
+      </table>
+      <h3>Slave Server</h3>
+      <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Email</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Date of Born</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i=0;i<allSlave.length;i++){%>
+            <tr>
+                <th scope="row">
+                    <b><%=allSlave[i].email%></b>
+                </th>
+
+                <td>
+                    <b><%=allSlave[i].name%></b>
+                </td>
+                <td>
+                    <b><%=allSlave[i].phone%></b>
+                </td>
+                <td>
+                    <b><%=allSlave[i].borndate%></b>
+                </td>
+                <td>
+                    <b><%=allSlave[i].address%></b>
+                </td>
+                <td>
+                    <b><%=allSlave[i].password%></b>
+                </td>
+            </tr>
+            <%}%>
+            </tbody>
+          </table>
+</body>
+</html>
